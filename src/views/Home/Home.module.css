@@ -1,0 +1,15 @@
+.postContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.loadMoreBtn {
+  margin-top: 10px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
