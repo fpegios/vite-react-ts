@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { Post } from "../../services/posts";
-import styles from './PostCard.module.css';
 
 interface PostCardProps {
   post: Post;
@@ -8,15 +7,21 @@ interface PostCardProps {
 
 const PostCard: React.FC<PostCardProps> = ({ post }) => {
   const navigate = useNavigate();
-
+  
   const handleClick = () => {
     navigate(`/post/${post.id}`);
   };
-
+  
   return (
-    <div className={styles.postCard} onClick={handleClick} role="button" tabIndex={0}>
-      <h3>{post.title}</h3>
-      <p>{post.body}</p>
+    <div 
+      className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+      onClick={handleClick} 
+      role="button" 
+      tabIndex={0}
+      onKeyDown={(e) => e.key === 'Enter' && handleClick()}
+    >
+      <h3 className="text-xl font-semibold text-gray-800 mb-2 truncate">{post.title}</h3>
+      <p className="text-gray-600 line-clamp-3">{post.body}</p>
     </div>
   );
 };
