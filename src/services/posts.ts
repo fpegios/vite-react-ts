@@ -4,6 +4,11 @@ export interface Post {
   body: string;
 }
 
+export interface PostsData {
+  pages: Post[][];
+  pageParams: unknown[];
+}
+
 export interface PaginatedResponse {
   data: Post[];
 }
@@ -22,5 +27,18 @@ export const fetchPostById = async (postId?: string) => {
 
   const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`);
   if (!response.ok) throw new Error('Failed to fetch post');
+  return response.json();
+};
+
+export const addPost = async (post: { title: string; body: string }) => {
+  const response = await fetch(`https://jsonplaceholder.typicode.com/posts`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(post),
+  });
+
+  if (!response.ok) throw new Error('Failed to add post');
   return response.json();
 };
