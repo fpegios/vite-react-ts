@@ -1,11 +1,71 @@
-# React + TypeScript + Vite
+# Vite React TypeScript Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Vite project setup with React, TypeScript, React Query, and Tailwind CSS. It serves as a training project to demonstrate the setup and usage of these technologies together.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project displays a list of posts on the home view. Users can add new posts, view their profile, and update their profile information.
+
+## Technologies Used
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Query](https://react-query.tanstack.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## Installation
+
+To get started with this project, clone the repository and install the dependencies:
+
+```bash
+git clone https://github.com/your-username/vite-react-ts.git
+cd vite-react-ts
+npm install
+```
+
+## Usage
+
+To run the project locally, use the following command:
+
+```bash
+npm run dev
+```
+
+This will start the development server and you can view the project in your browser at `http://localhost:3000`.
+
+## Building for Production
+
+To build the project for production, use the following command:
+
+```bash
+npm run build
+```
+
+This will create an optimized build of the project in the `dist` directory.
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Query](https://react-query.tanstack.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Expanding the ESLint configuration
 
@@ -52,3 +112,4 @@ export default tseslint.config({
   },
 })
 ```
+````
